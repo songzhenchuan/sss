@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="/webproject/admin/easyui/themes/default/easyui.css"><link>
+		<link rel="stylesheet" type="text/css" href="/webproject/admin/easyui/themes/icon.css"><link>
+		<script  src= "/webproject/admin/easyui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script  src= "/webproject/admin/easyui/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script  src= "/webproject/admin/easyui/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript"  src="/webproject/admin/js/goods.js"></script>
+		<script type="text/javascript"  src="/webproject/admin/js/datagrid-detailview.js"></script>
+		<style type="text/css">
+			#tb{width:300px;margin:20px auto;}
+		</style>
+		<title>商品管理</title>
+	</head>
+<body>
+	商品管理
+	<hr size="0"/>
+	<!-- combobox支持动态绑定数据 -->
+	<input id="cate"  name="cate"  /> 
+	<table id ="tb"></table>
+	<!-- <input type="text" name="textfield" class="inputtable" list="ds" id="searchtext"/>
+ 	 <datalist id="ds"></datalist> -->
+	<div 
+			id="dialog1" 
+			class="easyui-dialog" 
+			title="添加商品" 
+			style="width:400px;height:500px"  
+        	data-options="iconCls:'icon-add',resizable:true,modal:true,buttons:'#footer',closed:true">
+			<form action="" method="post" id="f1" name="f1">
+				<table id ="tb1">		
+					<tr>
+						<td>编号：</td>
+						<td><input id="gid" name="gid" type="text" class="easyui-textbox easyui-validatebox" data-options="required:true,missingMessage:'请输入商编号'"></td>
+					</tr>
+					<tr>
+						<td>商品名称：</td>
+						<td><input id="gtitle" name="gtitle" type="text" class="easyui-textbox easyui-validatebox" data-options="required:true,missingMessage:'请输入商品名称'"></td>
+					</tr>
+					<tr>
+						<td>作者：</td>
+						<td><input id="gauthor" name="gauthor" type="text" class="easyui-textbox easyui-validatebox" data-options="required:true,missingMessage:'请输入作者'"></td>
+					</tr>
+					<tr>
+						<td>售价：</td>
+						<td><input id="gsaleprice" name="gsaleprice" type="text" class="easyui-textbox easyui-validatebox" data-options="required:true,missingMessage:'请输入售价'"></td>
+					</tr>
+					<tr>
+						<td>进价：</td>
+						<td><input id="ginprice" name="ginprice" type="text" class="easyui-textbox easyui-validatebox" data-options="required:true,missingMessage:'请输入进价'"></td>
+					</tr>
+					<tr style="display:none;">
+						<td>内容：</td>
+						<td><input id="gdesc" name="gdesc" type="text" value=" xxx"class="easyui-textbox easyui-validatebox" ></td>
+					</tr>
+					<tr>
+						<td>图片名称：</td>
+						<td><input id="gimg" name="gimg" type="text" class="easyui-textbox easyui-validatebox" data-options="required:true,missingMessage:'请输入图片名称'"></td>
+					</tr>
+					<tr>
+						<td>访问量：</td>
+						<td><input id="gclicks" name="gclicks" type="text" class="easyui-textbox easyui-validatebox" data-options="required:true,missingMessage:'请输入访问量'"></td>
+					</tr>
+					<tr>
+						<td>类型编号：</td>
+						<td><input id="cid" name="cid" type="text" class="easyui-textbox easyui-validatebox" data-options="required:true,missingMessage:'请输入类型编号'"></td>
+					</tr>
+					<tr>
+						<td>出版社编号：</td>
+						<td><input id="pid" name="pid" type="text" class="easyui-textbox easyui-validatebox" data-options="required:true,missingMessage:'请输入出版社编号'"></td>
+					</tr>
+					<!-- <tr>
+						<td>选择图片:</td>
+						<td><input id="idFile" style="width:224px" runat="server" name="pic" onchange="javascript:setImagePreview(this,localImag,preview);" type="file" /></td>					
+					</tr>	 -->
+					<!-- <tr>
+						<td>预览图片:</td>
+						<td><img id="preview" alt="预览图片" onclick="over(preview,divImage,imgbig);" src="images/blocks.gif" style="width: 400px; height: 400px;"/></td>							
+					</tr> -->
+			</table>	
+			</form>
+		</div> 	 
+	<div id="footer">
+		<a id="btnsave" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存</a>
+		<a id="btncancel" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">取消</a>
+	</div>
+</body>
+</html>

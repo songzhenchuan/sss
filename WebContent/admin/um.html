@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="/webproject/admin/easyui/themes/default/easyui.css"><link>
+		<link rel="stylesheet" type="text/css" href="/webproject/admin/easyui/themes/icon.css"><link>
+		<script  src= "/webproject/admin/easyui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script  src= "/webproject/admin/easyui/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script  src= "/webproject/admin/easyui/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript"  src="/webproject/admin/js/um.js"></script>
+		<style type="text/css">
+			#tb{width:300px;margin:20px auto;}
+		</style>
+		<title></title>
+	</head>
+	<body>
+		用户列表
+		<hr size="0">
+		<table id="tab"></table>
+		<!-- dialog -->
+		<div 
+			id="dialog" 
+			class="easyui-dialog" 
+			title="添加用户" 
+			style="width:400px;height:300px"  
+        	data-options="iconCls:'icon-add',resizable:true,modal:true,buttons:'#footer',closed:true">
+			<form action="" method="post" id="f1" name="f1">
+				<table id ="tb">
+					<tr>
+						<td>邮箱：</td>
+						<td><input id="uemail" name="uemail" type="text" class="easyui-textbox easyui-validatebox" data-options="validType:'email',required:true,missingMessage:'请输入邮箱'"></td>
+					</tr>
+					<tr>
+						<td>账号：</td>
+						<td><input id="uloginid" name="uloginid" type="text" class="easyui-textbox easyui-validatebox" data-options="validType:'minLength[5]',required:true,missingMessage:'请输入账号'"></td>
+					</tr>
+					<tr>
+						<td>密码：</td>
+						<td><input id="upassword" name="upassword" type="text" class="easyui-textbox easyui-validatebox" data-options="validType:'minLength[5]',required:true,missingMessage:'请输入密码'"></td>
+					</tr>
+					<tr>
+						<td>电话：</td>
+						<td><input id="utel" name="utel" type="text" class="easyui-textbox easyui-validatebox" data-options="validType:'minLength[5]',required:true,missingMessage:'请输入电话'"></td>
+					</tr>
+					<tr>
+						<td>地址：</td>
+						<td><input id="uaddress" name="uaddress" type="text" class="easyui-textbox easyui-validatebox" data-options="validType:'minLength[5]',required:true,missingMessage:'请输入地址'"></td>
+					</tr>
+					<tr>
+						<td>性别：</td>
+						<td>
+							<select id="usex" name="usex" class="easyui-combobox" style="width:50px;">
+							<option value="男">男</option>
+							<option value="女">女</option>
+							</select>
+						</td>
+					</tr>
+			</table>	
+			</form>
+		</div> 	 
+		<div id="footer">
+			<a id="btnsave" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存</a>
+			<a id="btncancel" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">取消</a>
+		</div>
+		<hr />
+	</body>
+</html>
